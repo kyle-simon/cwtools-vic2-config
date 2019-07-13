@@ -21,9 +21,9 @@ units_history = {
 	## cardinality = 0..inf
     enum[country_tags] = {
         value = int
-        ## cardinality 0..1
+        ## cardinality = 0..1
         level = enum[influence_level]
-        ## cardinality 0..1
+        ## cardinality = 0..1
         influence_value = int
     }
 
@@ -34,7 +34,7 @@ units_history = {
         type = <unit_type>
         personality = <personality>
         background = <background>
-        ## cardinality 0..1
+        ## cardinality = 0..1
         prestige = float
     }
 

@@ -22,9 +22,9 @@ country_history = {
         <ideology> = float
     }
     ### Starting state consciousness
-    consciousness = float
+    consciousness = int
     ### Starting colonial consciousness
-    nonstate_consciousness = float
+    nonstate_consciousness = int
     ### Startings presitge
     prestige = int
 

@@ -14,7 +14,7 @@ types = {
 }
 
 technologies_file = {
-	## cardinality 0..inf
+	## cardinality = 0..inf
 	<technology> = {
 
 		area = <technology_area>

@@ -16,7 +16,7 @@ invention = {
 	limit = { <technology> = int[1..1] }
 	chance = {
 		base = int
-		## cardinality 0..inf
+		## cardinality = 0..inf
 		modifier = {
 			# TODO: add chance modifiers invention
 		}
