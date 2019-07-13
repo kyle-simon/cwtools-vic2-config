@@ -3,7 +3,7 @@ types = {
     type[on_action] = {
         path = "game/common"
 		path_file = "on_actions.txt"
-        start_from_root = yes
+
         ## type_key_filter = on_yearly_pulse
         subtype[on_yearly_pulse] = { }
         ## type_key_filter = on_quarterly_pulse

@@ -30,7 +30,7 @@ country_history = {
 
     civilized = bool
     # TODO figure out a better way to validate this
-    oob = scalar
+    oob = filepath[game/history/units]
     # TODO one fore each?
    	## cardinality = 0..inf
     <social_reforms> = <social_reform>
@@ -47,7 +47,7 @@ country_history = {
     # Can be more than one bookmark, even two blocks for the same bookmark
    	## cardinality = 0..inf
     <bookmark> = {
-       	oob = scalar
+       	oob = filepath[game/history/units]
        	## cardinality = 0..1
         literacy = float[0..1.0]
        	## cardinality = 0..1
