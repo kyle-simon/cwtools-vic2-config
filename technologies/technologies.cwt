@@ -1,6 +1,7 @@
 types = {
-	type[technology_file] = {
-		name_from_file = yes
+	type[technologies_file] = {
+		path_strict = yes
+		type_per_file = yes
 		path = "game/technologies"
 	}
 	type[technology] = {
@@ -12,8 +13,8 @@ types = {
 	}
 }
 
-technology_file = {
-
+technologies_file = {
+	## cardinality 0..inf
 	<technology> = {
 
 		area = <technology_area>

@@ -1,6 +1,5 @@
 types = {
 	type[default_map] = {
-		name_from_file = yes
 		type_per_file = yes
 		path = "game/map"
 		path_file = "default.map"

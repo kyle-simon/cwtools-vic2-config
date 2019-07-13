@@ -1,0 +1,37 @@
+
+types = {
+	type[war_history] = {
+		path = "game/history/wars"
+		type_per_file = yes
+	}
+}
+
+war_history = {
+	name = scalar #todo: name
+
+	## cardinality = 2..inf
+	date_field = {
+		## cardinality = 0..inf
+		add_attacker = enum[country_tags]
+		## cardinality = 0..inf
+		add_defender = enum[country_tags]
+
+        war_goal = {
+            type = <wargoal_type>
+            casus_belli = <casus_belli>
+            ## cardinality = 0..1
+            province = <province_id>
+            ## cardinality = 0..1
+            actor = enum[country_tags]
+            ## cardinality = 0..1
+            receiver = enum[country_tags]
+        }
+
+		## cardinality = 0..inf
+		rem_attacker = enum[country_tags]
+		## cardinality = 0..inf
+		rem_defender = enum[country_tags]
+	}
+}
+
+

@@ -1,0 +1,69 @@
+types = {
+    type[country_history] = {
+            path = "game/history/countries"
+            type_per_file = yes
+            path_strict = yes
+        }
+}
+
+country_history = {
+    capital = <province_id>
+    primary_culture = <culture>
+    religion = <religion>
+    government = <government>
+    plurality = float[0..100.0]
+    nationalvalue = <nationalvalue>
+    literacy = float[0..1.0]
+    non_state_culture_literacy = float[0..1.0]
+    ruling_party = <party>
+    upper_house = {
+        # TODO one for each
+    	## cardinality = 0..inf
+        <ideology> = float
+    }
+    ### Starting state consciousness
+    consciousness = float
+    ### Starting colonial consciousness
+    nonstate_consciousness = float
+    ### Startings presitge
+    prestige = int
+
+    civilized = bool
+    # TODO figure out a better way to validate this
+    oob = scalar
+    # TODO one fore each?
+   	## cardinality = 0..inf
+    <social_reforms> = <social_reform>
+
+   	## cardinality = 0..inf
+    <political_reforms> = <political_reform>
+
+   	## cardinality = 0..inf
+    <economic_reforms> = <economic_reform>
+
+   	## cardinality = 0..inf
+    <military_reforms> = <military_reform>
+
+    # Can be more than one bookmark, even two blocks for the same bookmark
+   	## cardinality = 0..inf
+    <bookmark> = {
+       	oob = scalar
+       	## cardinality = 0..1
+        literacy = float[0..1.0]
+       	## cardinality = 0..1
+        non_state_culture_literacy = float[0..1.0]
+
+        ## cardinality = 0..inf
+        <social_reforms> = <social_reform>
+
+        ## cardinality = 0..inf
+        <political_reforms> = <political_reform>
+
+        ## cardinality = 0..inf
+        <economic_reforms> = <economic_reform>
+
+        ## cardinality = 0..inf
+        <military_reforms> = <military_reform>
+
+    }
+}

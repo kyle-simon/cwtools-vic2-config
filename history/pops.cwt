@@ -1,0 +1,19 @@
+types = {
+    ## push_scope = province
+	type[pops_history] = {
+		path = "game/history/pops"
+		type_per_file = yes
+	}
+}
+
+pops_history = {
+	## cardinality = 0..inf
+    <province_id> = {
+    	## cardinality = 0..inf
+        <pop_type> = {
+            culture = <culture>
+            religion = <religion>
+            size = int
+        }
+    }
+}

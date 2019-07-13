@@ -1,4 +1,4 @@
-## scope = pop
+## scope = province
 alias[effect:assimilate] = bool
 ## scope = pop
 alias[effect:consciousness] = float
@@ -18,7 +18,7 @@ alias[effect:literacy] = float
 alias[effect:militancy] = float
 ## scope = pop
 alias[effect:money] = int
-## scope = pop
+## scope = country
 alias[effect:move_issue_percentage] = { 
 	from =<issue> 
 	to = <issue>

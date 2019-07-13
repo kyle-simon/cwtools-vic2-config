@@ -1,6 +1,6 @@
 types = {
 	type[poptype] = {
-		name_from_file = yes
+		type_per_file = yes
 		path = "game/poptypes"
 		localisation = {
 			## required

@@ -2,19 +2,22 @@ types = {
 	type[technology_folders] = {
 		path = "game/common"
 		path_file = "technology.txt"
-
 		skip_root_key = folders
 	}
 	type[technology_area] = {
 		path = "game/common"
 		path_file = "technology.txt"
 
-		skip_root_key = { folders any }
+		skip_root_key = { folders any } 
 
 		localisation = {
 			## required
 			name = "$"
 		}
+	}
+	type[technology_file] = {
+		path = "game/common"
+		path_file = "technology.txt"
 	}
 	type[schools] = {
 		path = "game/common"
@@ -25,6 +28,16 @@ types = {
 		localisation = {
 			## required
 			name = "$"
+		}
+	}
+}
+
+technology_file = {
+	folders = {
+		## cardinality = 0..inf
+		<technology_folders> = {
+			## cardinality 0..inf
+			<technology_area>
 		}
 	}
 }

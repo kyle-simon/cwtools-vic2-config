@@ -1,0 +1,26 @@
+types = {
+    type[diplomacy_history] = {
+        path = "game/history/diplomacy"
+        type_per_file = yes
+    }
+}
+
+enums = {
+	enum[other_diplo_history] = {
+		guarantee
+		union
+        alliance
+        substate
+        vassal
+	}
+}
+
+diplomacy_history = {
+    ## cardinality = 0..inf
+    enum[other_diplo_history] = {
+        first = enum[country_tags]
+        second = enum[country_tags]
+        start_date = date_field
+        end_date = date_field
+    }
+}

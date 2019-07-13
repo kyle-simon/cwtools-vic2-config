@@ -10,7 +10,7 @@ types = {
 	type[issue] = {
 		path = "game/common"
 		path_file = "issues.txt"
-		skip_root_key = party_issues any
+		skip_root_key = { party_issues any}
 		localisation = {
 			name = "$"
 		}
@@ -26,7 +26,7 @@ types = {
 	type[political_reform] = {
 		path = "game/common"
 		path_file = "issues.txt"
-		skip_root_key = political_reforms any
+		skip_root_key = { political_reforms any }
 		localisation = {
 			name = "$"
 		}
@@ -42,7 +42,7 @@ types = {
 	type[social_reform] = {
 		path = "game/common"
 		path_file = "issues.txt"
-		skip_root_key = social_reforms any
+		skip_root_key = { social_reforms any }
 		localisation = {
 			name = "$"
 		}
@@ -58,7 +58,7 @@ types = {
 	type[economic_reform] = {
 		path = "game/common"
 		path_file = "issues.txt"
-		skip_root_key = economic_reforms any
+		skip_root_key = { economic_reforms any }
 		localisation = {
 			name = "$"
 		}
@@ -74,7 +74,7 @@ types = {
 	type[military_reform] = {
 		path = "game/common"
 		path_file = "issues.txt"
-		skip_root_key = military_reforms any
+		skip_root_key = { military_reforms any }
 		localisation = {
 			name = "$"
 		}

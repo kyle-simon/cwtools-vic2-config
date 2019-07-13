@@ -15,7 +15,7 @@ alias[trigger:immediate] = {
 	alias_name[effect] = alias_match_left[effect]
 }
 ## scope = any
-alias[trigger:check_variable] = {
+alias[trigger:check_variable] = {F
 	which = value[variable]
 	value = float
 }
@@ -23,7 +23,6 @@ alias[trigger:check_variable] = {
 alias[trigger:has_global_flag] = scalar
 ## scope = any
 alias[trigger:is_canal_enabled] = int[0..3]
-
 ## scope = country
 alias[trigger:administration_spending] = float
 ## scope = country

@@ -16,7 +16,7 @@ types = {
 			type = naval_base 
 		}
 		subtype[railroad] = {
-			type = railroad 
+			type = infrastructure 
 		}
 	}
 }
@@ -33,9 +33,24 @@ building = {
 
 		production_type = <production_types>
 		pop_build_factory = yes
-		advanced_factory = yes	
-		## cadinality = 0..1
-		default_enabled = bool
+
+		## cardinality = 0..1
+		advanced_factory = yes
+
+		## cardinality = 0..1
+		### If factory is enabled from the start
+		default_enabled = yes
+
+		## cardinality = 0..1
+		steam = yes
+
+		## cardinality = 0..1
+		strategic_factory = yes
+
+		## cardinality = 0..1
+		sail = yes
+
+		onmap = no
 	}
 	
     max_level = int[0..255]
@@ -51,13 +66,13 @@ building = {
 
 	time = int
 	visibility = yes
-	onmap = no
 
 	subtype[fort] = {
 		type = fort
         province = yes
         one_per_state = yes
-        fort_level = int
+		fort_level = int	
+		onmap = yes
 	}
 
 	subtype[naval_base] = {
@@ -71,16 +86,20 @@ building = {
         province = yes
         one_per_state = yes
         colonial_range = int
-        local_ship_build = float
+		local_ship_build = float
+		onmap = yes
+		capital = yes
+		naval_capacity = 1
 	}
 
 	subtype[railroad] = {
-		type = railroad
+		type = infrastructure
         province = yes
         infrastructure = float
         movement_cost = float
     	pop_build_factory = yes
-		spawn_railway_track = no
+		spawn_railway_track = yes
+		onmap = yes
 	}
 
 }

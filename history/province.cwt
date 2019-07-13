@@ -1,0 +1,63 @@
+types = {
+    ## push_scope = province
+	type[province_history] = {
+		#TODO: check if this is valid
+		path = "game/history/provinces"
+		type_per_file = yes
+
+		subtype[owned] = {
+			owner = scalar
+		}
+	}
+}
+
+province_history = {
+
+    trade_goods = <goods>
+    life_rating = int
+
+	subtype[owned] = {
+		owner = enum[country_tags]
+		controller = enum[country_tags]
+		## cardinality = 0..inf
+		add_core = enum[country_tags]
+
+		## cardinality = 0..1
+        colonial = int
+
+		## cardinality = 0..inf
+        railroad = int[0..6]
+
+		## cardinality = 0..inf
+        fort = int[0..6]
+
+		## cardinality = 0..inf
+        state_building = {
+            level = int[1..255]
+            building = <building>
+            upgrade = bool
+        }        
+	}
+
+	## cardinality = 0..inf # TODO not first in bookmark list
+	<bookmark> = {
+		owner = enum[country_tags]
+		controller = enum[country_tags]
+		## cardinality = 0..inf
+		add_core = enum[country_tags]
+
+		## cardinality = 0..inf
+        railroad = int[0..6]
+
+		## cardinality = 0..inf
+        fort = int[0..6]
+
+		## cardinality = 0..inf
+        state_building = {
+            level = int[1..255]
+            building = <building>
+            upgrade = bool
+        }        
+	}
+
+}

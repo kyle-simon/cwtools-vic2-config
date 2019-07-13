@@ -1,6 +1,6 @@
 types = {
 	type[invention_file] = {
-		name_from_file = yes
+		type_per_file = yes
 		path = "game/inventions"
 	}
 	type[invention] = {
@@ -16,6 +16,10 @@ invention = {
 	limit = { <technology> = int[1..1] }
 	chance = {
 		base = int
+		## cardinality 0..inf
+		modifier = {
+			# TODO: add chance modifiers invention
+		}
 	}
 	effect = {
 		alias_name[modifier] = alias_match_left[modifier]

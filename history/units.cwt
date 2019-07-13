@@ -1,0 +1,63 @@
+types = {
+    type[units_history] = {
+		path = "game/history/units" #TODO what about <bookmark> sub dirs? 
+		type_per_file = yes
+	}
+}
+
+enums = {
+	enum[influence_level] = {
+        0
+        1
+        2
+		3 # cordial
+        4 # friendly
+        5 # sphere
+	}
+}
+
+units_history = {
+    # TODO cardianlity one uniqu key
+	## cardinality = 0..inf
+    enum[country_tags] = {
+        value = int
+        ## cardinality 0..1
+        level = enum[influence_level]
+        ## cardinality 0..1
+        influence_value = int
+    }
+
+	## cardinality = 0..inf
+    leader = {
+        name = scalar
+        date = date_field
+        type = <unit_type>
+        personality = <personality>
+        background = <background>
+        ## cardinality 0..1
+        prestige = float
+    }
+
+	## cardinality = 0..inf
+    army = {
+        name = scalar
+        location = <province_id>
+        ## cardinality = 0..inf
+        regiment = {
+            name= scalar
+            type = <unit>
+            home = <province_id>
+        }
+    }
+
+	## cardinality = 0..inf
+    navy = {
+        name = scalar
+        location = <province_id>
+        ## cardinality = 0..inf
+        ship = {
+            name = scalar
+            type = <unit>
+        }
+    }
+}

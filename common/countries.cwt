@@ -1,12 +1,10 @@
 
 types = {
 	type[country_color_file] = {
-		name_from_file = yes
 		type_per_file = yes
 		path = "game/common/country_colors"
 	}
 	type[country_file] = {
-		name_from_file = yes
 		type_per_file = yes
 		path = "game/common/countries"
 	}
