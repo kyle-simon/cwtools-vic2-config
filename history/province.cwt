@@ -1,7 +1,6 @@
 types = {
     ## push_scope = province
 	type[province_history] = {
-		#TODO: check if this is valid
 		path = "game/history/provinces"
 		type_per_file = yes
 

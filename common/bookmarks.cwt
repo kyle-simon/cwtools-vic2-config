@@ -6,12 +6,14 @@ types = {
 	}
 }
 
-bookmark =
-{
+bookmark = {
 	name = localisation
 	desc = localisation
+	### Start date for the bookmark
 	date = date_field
+	### X-position of the camera when the bookmark is selected
 	cameraX = int 
+	### Y-position of the camera when the bookmark is selected
 	cameraY = int
 }
 

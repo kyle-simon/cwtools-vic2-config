@@ -1,3 +1,15 @@
+types = {
+	type[national_value] = {
+		path = "game/common"
+		path_file = "nationalvalues.txt"
+		# TODO: localization
+	}
+}
+
+national_value = {
+	alias_name[modifier] = alias_match_left[modifier]
+}
+
 nv_order = {
 	mobilisation_size = 0.04
 	mobilisation_economy_impact = 1.0

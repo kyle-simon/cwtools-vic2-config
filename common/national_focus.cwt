@@ -1,3 +1,29 @@
 # TODO - belive it is largly hardcoded static... 
 # constrainde format :(
-	
+    
+types = {
+    type[national_focus] = {
+        path = "game/common"
+        path_file = "national_focus.txt"
+        skip_root_key = any
+    }
+
+    type[national_focus_folder] = {
+        path = "game/common"
+        path_file = "national_focus.txt"
+    }
+}
+
+national_focus_folder = {
+    ## cardinality = 1..inf
+    <national_focus> = {
+        # TODO: add NF modifiers
+        
+        # TODO: add validation on icon range
+        icon = int
+        ## cardinality = 0..1
+        limit = {
+            alias_name[trigger] = alias_match_left[trigger]
+        }
+    }
+}

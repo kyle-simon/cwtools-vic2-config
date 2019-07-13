@@ -106,7 +106,7 @@ alias[effect:define_general] = {
 	background = <background>
 }
 ## scope = country
-alias[effect:nationalvalue] = <national_values> 
+alias[effect:nationalvalue] = <national_value> 
 ## scope = country
 alias[effect:plurality] = float
 ## scope = country
