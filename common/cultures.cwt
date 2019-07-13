@@ -20,7 +20,8 @@ types = {
 
 
 culture_group = {
-	leader = enum[graphical_cultures]
+	# TODO: find out how to validate this exactly
+	leader = scalar
 
 	## cardinality = 0..1
 	unit = enum[graphical_cultures]

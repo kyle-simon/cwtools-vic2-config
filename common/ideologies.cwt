@@ -25,40 +25,53 @@ ideology_group = {
 		## cardinality = 0..1
 		uncivilized = no
 
+		## cardinality = 0..1
+		can_reduce_miliatancy = yes
+
 		color = {
 			## cardinality = 3..3
 			int[0..255]
 		}
 
 		## cardinality = 0..1
-		date = time_date
+		date = date_field
 	
 		add_political_reform = {
-			base = int
+			base = float[-1..1]
 			## cardinality = 0..inf
 			alias_name[modifier_rule] = alias_match_left[modifier_rule]
 		}
 	
 		remove_political_reform = {
-			base = int
+			base = float[-1..1]
 			## cardinality = 0..inf
 			alias_name[modifier_rule] = alias_match_left[modifier_rule]
 		}
 	
 	
 		add_social_reform = {
-			base = int
+			base = float[-1..1]
 			## cardinality = 0..inf
 			alias_name[modifier_rule] = alias_match_left[modifier_rule]
 		}
 	
 	
 		remove_social_reform = {
-			base = int
+			base = float[-1..1]
 			## cardinality = 0..inf
 			alias_name[modifier_rule] = alias_match_left[modifier_rule]
 		}
 		
+		## cardinality = 0..1
+		add_military_reform = {
+			base = float[-1..1]
+			alias_name[modifier_rule] = alias_match_left[modifier_rule]
+		}
+		## cardinality = 0..1
+		add_economic_reform = {
+			base = float[-1..1]
+			alias_name[modifier_rule] = alias_match_left[modifier_rule]
+		}
 		
 		
 	}

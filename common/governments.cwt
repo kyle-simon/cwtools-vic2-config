@@ -9,20 +9,32 @@ types = {
 	}
 }
 
-governments =
-{
+enums = {
+	enum[flag_type] = {
+		monarchy
+		communist
+		fascist
+		republic
+	}
+}
+
+governments = {
 	## cardinality = 0..inf
+	### Ideologies which are allowed to be the ruling party
 	<ideology> = yes
 	
-	## cardinality = 0..1
-	election = no
+	### Whether or not this government type has elections 
+	election = bool
 
 	## cardinality = 0..1
-	appoint_ruling_party = yes
+	### Whether or not this government can appoint its ruling party
+	appoint_ruling_party = bool
 
 	## cardinality = 0..1
+	### Time between elections
 	duration = int
 
 	## cardinality = 0..1
-	flagType = <ideology>
+	# TODO: figure out what these flag types do
+	flagType = enum[flag_type]
 }

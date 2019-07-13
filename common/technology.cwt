@@ -36,7 +36,7 @@ technology_file = {
 	folders = {
 		## cardinality = 0..inf
 		<technology_folders> = {
-			## cardinality 0..inf
+			## cardinality = 0..inf
 			<technology_area>
 		}
 	}

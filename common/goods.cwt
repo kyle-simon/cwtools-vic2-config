@@ -9,13 +9,26 @@ types = {
 	}
 }
 
+# TODO: Refactor money/tradeable/overseas_penalty into separate types
 
 goods = {
+		### Base cost of good
 		cost = float
+
 		color = {
         	## cardinality = 3..3
         	int[0..255]
         }
 		## cardinality = 0..1
 		available_from_start = no
+		## cardinality = 0..1
+		### Removes this good from the market
+		tradeable = no
+		## cardinality = 0..1
+		### Used for precious metal
+		money = yes
+
+		## cardinality = 0..1
+		# TODO: figure out what this does
+		overseas_penalty = yes
 }

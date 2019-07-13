@@ -2,7 +2,6 @@ types = {
 	type[pop_chances] = {
 		path = "game/common"
 		path_file = "pop_types.txt"
-		skip_root_key = any
         ## type_key_filter = promotion_chance
 		subtype[promotion_chance] = { }
         ## type_key_filter = demotion_chance
@@ -17,13 +16,6 @@ types = {
 		subtype[assimilation_chance] = { }
         ## type_key_filter = conversion_chance
 		subtype[conversion_chance] = { }
-	}
-	type[parliament_issue] = {
-		path = "game/common/parliament_issues"
-		localisation = {
-			## required
-			name = "$"
-		}
 	}
 }
 
